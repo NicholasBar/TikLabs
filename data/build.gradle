@@ -1,0 +1,25 @@
+import buildsrc.Libs
+
+apply plugin: 'kotlin'
+
+dependencies {
+
+    //Data module needs reference to domain layer as it provides interface that needs to implement for data flow
+    implementation project(':domain')
+
+    implementation Libs.RxJava.rxJava
+    implementation Libs.RxJava.rxKotlin
+
+    implementation Libs.JavaX.javaxAnnotation
+    implementation Libs.JavaX.javaxInject
+
+    implementation Libs.Kotlin.kotlinJunit
+    implementation Libs.Kotlin.stdlib
+
+    testImplementation Libs.mockitoKotlin
+    testImplementation Libs.junit
+    testImplementation Libs.assertj
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"

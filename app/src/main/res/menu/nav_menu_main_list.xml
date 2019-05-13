@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_dest_id"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/discover_dest"
+        android:icon="@drawable/ic_discover"
+        android:title="@string/discover" />
+
+    <item
+        android:id="@+id/nav_home_to_camera"
+        android:icon="@drawable/ic_add"
+        android:title="" />
+
+    <item
+        android:id="@+id/signup_dialog_dest"
+        android:icon="@drawable/ic_notifications"
+        android:title="@string/notifications" />
+
+    <item
+        android:id="@+id/me_dialog_dest"
+        android:icon="@drawable/ic_me"
+        android:title="@string/me" />
+</menu>

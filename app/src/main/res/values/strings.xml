@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">TikLabs</string>
+    <string name="home">Home</string>
+    <string name="discover">Discover</string>
+    <string name="notifications">Notifications</string>
+    <string name="me">Me</string>
+    <string name="thumbnail">thumbnail</string>
+    <string name="tap_again_exit">Tap again to exit</string>
+    <string name="take_photo">TAKE PHOTO</string>
+    <string name="permission_required">Permission Required</string>
+    <string name="permission_message">You must grant permission to access camera.</string>
+    <string name="permission_warning">All permissions are required.</string>
+    <string name="txt_terms">By signing up, you confirm that you agree to our Terms of Use and have read and understood our Privacy Policy.</string>
+    <string name="txt_account_login">Already have an account? Log in</string>
+    <string name="btn_signup">Sin Up with Phone or Email</string>
+    <string name="txt_hearts">Hearts</string>
+    <string name="txt_follow">Follow</string>
+    <string name="txt_nicholasbar">\@NicholasBar</string>
+    <string name="txt_nicholas_barbovitch">Nicholas Barbovitch</string>
+    <string name="txt_github">https://github.com/nicholasbar</string>
+    <string name="hot">Hot</string>
+    <string name="top">Top</string>
+    <string name="txt_new">New</string>
+    <string name="txt_random">Random</string>
+    <string name="btn_hire">Hire</string>
+    <string name="txt_great_choice">Great Choice!</string>
+    <string name="txt_phone">604 442 7423</string>
+    <string name="txt_email">NicholasBar@gmail.com</string>
+</resources>

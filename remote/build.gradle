@@ -1,0 +1,32 @@
+import buildsrc.Libs
+
+apply plugin: 'kotlin'
+
+dependencies {
+
+    //Remote module needs reference to data layer as it provides interface that needs to implement for data flow
+    implementation project(':data')
+    implementation project(':domain')
+    implementation Libs.RxJava.rxKotlin
+
+    implementation Libs.jsoup
+
+    implementation Libs.OkHttp.loggingInterceptor
+
+    implementation Libs.JavaX.javaxAnnotation
+    implementation Libs.JavaX.javaxInject
+
+    implementation Libs.commonIO
+    
+    implementation Libs.Kotlin.kotlinJunit
+    implementation Libs.Kotlin.stdlib
+
+    testImplementation Libs.mockitoKotlin
+    testImplementation Libs.junit
+    testImplementation Libs.assertj
+    testImplementation Libs.AndroidX.Test.runner
+    testImplementation Libs.AndroidX.Test.rules
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"

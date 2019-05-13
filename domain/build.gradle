@@ -1,0 +1,20 @@
+import buildsrc.Libs
+
+apply plugin: 'kotlin'
+
+dependencies {
+    implementation Libs.RxJava.rxJava
+    implementation Libs.RxJava.rxKotlin
+
+    implementation Libs.JavaX.javaxAnnotation
+    implementation Libs.JavaX.javaxInject
+
+    testImplementation Libs.mockitoKotlin
+    testImplementation Libs.junit
+    testImplementation Libs.robolectric
+    testImplementation Libs.assertj
+    testImplementation Libs.robolectric
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"

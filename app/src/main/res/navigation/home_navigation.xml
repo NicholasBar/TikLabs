@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/home_dest">
+    <fragment
+        android:id="@+id/home_dest"
+        android:name="assignm.nicholasbar.tikstreamlabstok.ui.home.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/nav_home_to_camera"
+            app:destination="@id/camera_dest" />
+    </fragment>
+    <dialog
+        android:id="@+id/signup_dialog_dest"
+        android:name="assignm.nicholasbar.tikstreamlabstok.ui.dialog.SignUpSheet" />
+    <dialog
+        android:id="@+id/me_dialog_dest"
+        android:name="assignm.nicholasbar.tikstreamlabstok.ui.dialog.MeSheet">
+        <action
+            android:id="@+id/nav_me_to_hire"
+            app:destination="@id/hire_dest" />
+    </dialog>
+
+    <activity
+        android:id="@+id/camera_dest"
+        android:name="assignm.nicholasbar.tikstreamlabstok.ui.camera.CameraActivity" />
+    <activity
+        android:id="@+id/hire_dest"
+        android:name="assignm.nicholasbar.tikstreamlabstok.ui.hire.HireActivity" />
+
+</navigation>
