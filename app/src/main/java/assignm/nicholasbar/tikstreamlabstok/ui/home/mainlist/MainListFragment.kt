@@ -4,11 +4,9 @@ import android.graphics.Typeface
 import android.os.Bundle
 import android.os.Parcelable
 import android.util.TypedValue
-import android.view.LayoutInflater
-import android.view.View
+import android.view.*
 import android.view.View.GONE
 import android.view.View.VISIBLE
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
@@ -41,6 +39,7 @@ class MainListFragment : TokLabsFragment() {
     private lateinit var viewModel: HomeBaseViewModel
     private lateinit var adapter: MainListAdapter
     private var loaded = false
+    private var superLikeCounter = 1
 
     private var listState: Parcelable? = null
 
@@ -66,6 +65,22 @@ class MainListFragment : TokLabsFragment() {
         filter_top.setOnClickListener { filterButtonClicked(Order.TOP) }
         filter_new.setOnClickListener { filterButtonClicked(Order.NEW) }
         filter_random.setOnClickListener { filterButtonClicked(Order.RANDOM) }
+        fab_like.setOnClickListener { fabLikeClicked() }
+    }
+
+    private fun setRippleCenter() {
+        val centerX = fab_like.x + fab_like.width / 2
+        val centerY = fab_like.y + fab_like.height / 2
+        ripples.setCenter(centerX,centerY)
+    }
+
+    private fun fabLikeClicked() {
+        fab_like.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY)
+        setRippleCenter()
+        ripples.addRipple()
+        ripples.addNumber(superLikeCounter)
+        superLikeCounter++
+        txt_likes.text = superLikeCounter.toString()
     }
 
     private fun filterButtonClicked(order: Order) {
@@ -208,4 +223,13 @@ class MainListFragment : TokLabsFragment() {
         outState.putParcelableArrayList(RECYCLER_CONTENTS, ArrayList(adapter.getElements()))
     }
 
+    override fun onPause() {
+        ripples.pause()
+        super.onPause()
+    }
+
+    override fun onResume() {
+        ripples.resume()
+        super.onResume()
+    }
 }
